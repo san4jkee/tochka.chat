@@ -1,0 +1,18 @@
+<svg width="512" height="512" viewBox="0 0 512 512" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Иконка мессенджера</title>
+  <desc>Круглая иконка с вырезанным силуэтом человека</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#0270c7"/>
+      <stop offset="100%" stop-color="#012b52"/>
+    </linearGradient>
+    <mask id="cutout">
+      <rect width="512" height="512" fill="white"/>
+      <circle cx="256" cy="210" r="90" fill="black"/>
+      <ellipse cx="256" cy="430" rx="148" ry="120" fill="black"/>
+    </mask>
+  </defs>
+
+  <circle cx="256" cy="256" r="256" fill="url(#bg)" mask="url(#cutout)"/>
+</svg>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Точка.чат — корпоративный мессенджер для Windows</title>
+  <meta name="description" content="Точка.чат — защищённый корпоративный мессенджер для Windows с аутентификацией через Active Directory. Данные остаются на вашем сервере.">
+  <meta name="keywords" content="корпоративный мессенджер, Active Directory, чат для компании, самохостинг, Windows, Точка чат">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <meta property="og:title" content="Точка.чат — корпоративный мессенджер">
+  <meta property="og:description" content="Защищённый мессенджер для команд и компаний. Развёртывание на вашем сервере, вход по Active Directory.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand">
+        <img src="assets/icon.svg" alt="Логотип Точка.чат" width="34" height="34">
+        <span class="brand__name">Точка<span class="brand__accent">.чат</span></span>
+      </a>
+      <nav class="nav__links">
+        <a href="#features">Возможности</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#server">Сервер</a>
+        <a href="#client">Скачать</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#server" class="btn btn--primary nav__cta">Начать развёртывание</a>
+      <button class="nav__burger" id="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="badge">Self-hosted · Windows · Active Directory</span>
+        <h1 class="hero__title">
+          Мессенджер для команд,<br>
+          который <span class="gradient-text">работает у вас</span>
+        </h1>
+        <p class="hero__subtitle">
+          Точка.чат — корпоративный мессенджер для Windows. Разворачивается на вашем
+          сервере за 15 минут, подключается к Active Directory и не отправляет данные
+          за пределы организации.
+        </p>
+        <div class="hero__actions">
+          <a href="https://github.com/" class="btn btn--primary btn--lg js-release" target="_blank" rel="noopener">Скачать клиент (.exe)</a>
+          <a href="#server" class="btn btn--ghost btn--lg">Настроить сервер</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat"><b>Node.js</b><span>бэкенд</span></div>
+          <div class="stat"><b>PostgreSQL</b><span>хранение данных</span></div>
+          <div class="stat"><b>Socket.IO</b><span>реальное время</span></div>
+          <div class="stat"><b>Electron</b><span>нативное приложение</span></div>
+        </div>
+      </div>
+
+      <!-- Mock chat preview -->
+      <div class="mockup" aria-hidden="true">
+        <div class="mockup__window">
+          <div class="mockup__top">
+            <span class="mockup__dot"></span>
+            <span class="mockup__dot"></span>
+            <span class="mockup__dot"></span>
+            <div class="mockup__title"># разработка</div>
+            <span class="mockup__online">12 в сети</span>
+          </div>
+          <div class="mockup__body">
+            <div class="mockup__row">
+              <div class="avatar avatar--a">ЕК</div>
+              <div class="bubble">
+                <div class="bubble__name">Екатерина</div>
+                <div class="bubble__text">Релиз собрали, автообновление подтянет новый .exe 🔥</div>
+                <div class="bubble__meta">14:02 <span class="tick tick--read">✓✓</span></div>
+              </div>
+            </div>
+            <div class="mockup__row mockup__row--me">
+              <div class="avatar avatar--me">ИП</div>
+              <div class="bubble bubble--me">
+                <div class="bubble__text">Отлично! Тогда голосование: кто за обновление?</div>
+                <div class="poll">
+                  <div class="poll__row"><span>За</span><div class="poll__bar poll__bar--1"></div><em>12</em></div>
+                  <div class="poll__row"><span>Против</span><div class="poll__bar poll__bar--2"></div><em>2</em></div>
+                </div>
+                <div class="bubble__meta">14:03 <span class="tick tick--read">✓✓</span></div>
+              </div>
+            </div>
+            <div class="mockup__row">
+              <div class="avatar avatar--b">СД</div>
+              <div class="bubble">
+                <div class="bubble__name">Сергей</div>
+                <div class="bubble__text">Кстати, прислал скриншот отчёта 📸</div>
+                <div class="bubble__meta">14:05 <span class="tick tick--sent">✓</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="mockup__input">
+            <span class="mockup__typing">Сергей печатает…</span>
+            <div class="mockup__field"><span>Сообщение</span></div>
+          </div>
+        </div>
+        <div class="mockup__glow"></div>
+      </div>
+    </div>
+    <a href="#features" class="hero__scroll" aria-label="Прокрутить вниз">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Возможности</span>
+        <h2 class="section__title">Всё, что нужно команде,<br>в одном окне</h2>
+        <p class="section__sub">От публичных каналов до опросов и галочек прочтения — ничего лишнего.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card reveal">
+          <div class="card__icon">#</div>
+          <h3>Каналы и личные сообщения</h3>
+          <p>Публичные и приватные каналы, прямые диалоги, закрепление избранного сверху списка и мут уведомлений.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon">🗂</div>
+          <h3>Файлы и медиа</h3>
+          <p>Любые файлы с предпросмотром фото, видео и аудио. Вставка скриншотов из буфера и перетаскивание в чат.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon">📊</div>
+          <h3>Опросы</h3>
+          <p>Голосования в каналах: до 10 вариантов, свой вариант, несколько ответов и наглядные результаты с прогресс-барами.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon">✓</div>
+          <h3>Галочки прочтения</h3>
+          <p>Одна галочка — отправлено, двойная — прочитано. Статусы обновляются в реальном времени.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon">⚡</div>
+          <h3>Реакции и ответы</h3>
+          <p>Эмодзи-реакции на сообщения, цитирование с превью, пересылка в другие каналы.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon">🔎</div>
+          <h3>Поиск и навигация</h3>
+          <p>Поиск по сообщениям, непрочитанные наверху, время сообщений и список всех пользователей.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon">🟢</div>
+          <h3>Статусы и индикатор набора</h3>
+          <p>Онлайн/оффлайн, последнее посещение, «печатает…» и десктопные уведомления о новых сообщениях.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon">🔄</div>
+          <h3>Автообновление</h3>
+          <p>Выпуск новой версии одной командой: сборка .exe, загрузка на сервер и обновление клиентов.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVANTAGES -->
+  <section class="section section--alt" id="advantages">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Преимущества</span>
+        <h2 class="section__title">Почему компании выбирают Точка.чат</h2>
+      </div>
+
+      <div class="steps">
+        <article class="step reveal">
+          <div class="step__num">01</div>
+          <h3>Данные — только у вас</h3>
+          <p>Мессенджер разворачивается на собственном сервере. Никаких облаков и третьих сторон — переписка и файлы не покидают периметр организации.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__num">02</div>
+          <h3>Вход через Active Directory</h3>
+          <p>Аутентификация через LDAP: сотрудники входят своими корпоративными учётными записями. Работает и без AD — с локальной регистрацией.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__num">03</div>
+          <h3>Простое развёртывание</h3>
+          <p>PostgreSQL, несколько файлов конфигурации и одна команда миграции. Готовый сервер за 15 минут — без сложных DevOps-пайплайнов.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__num">04</div>
+          <h3>Открытый стек</h3>
+          <p>Electron + React + Node.js + PostgreSQL + Socket.IO — знакомые технологии, которые легко поддерживать и дорабатывать под свои задачи.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVER SETUP -->
+  <section class="section" id="server">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Установка сервера</span>
+        <h2 class="section__title">Запустите сервер за 6 шагов</h2>
+        <p class="section__sub">Всё работает на Linux с Node.js 18+ и PostgreSQL 14+.</p>
+      </div>
+
+      <div class="setup">
+        <div class="setup__nav" id="setupNav">
+          <button class="setup__tab is-active" data-step="0">1 · База данных</button>
+          <button class="setup__tab" data-step="1">2 · Окружение</button>
+          <button class="setup__tab" data-step="2">3 · Миграции</button>
+          <button class="setup__tab" data-step="3">4 · Запуск</button>
+          <button class="setup__tab" data-step="4">5 · pm2</button>
+          <button class="setup__tab" data-step="5">6 · Клиент</button>
+        </div>
+
+        <div class="setup__panel" id="setupPanel">
+          <!-- panels injected by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT -->
+  <section class="section section--alt" id="client">
+    <div class="container">
+      <div class="client">
+        <div class="client__text">
+          <span class="section__tag">Клиент</span>
+          <h2 class="section__title">Нативное приложение для Windows</h2>
+          <p class="section__sub">Десктопный клиент на Electron — стабильный, автообновляемый, полностью на русском языке.</p>
+          <ul class="checklist">
+            <li>Автозапуск при входе в Windows</li>
+            <li>Автообновление через встроенный механизм</li>
+            <li>Вставка скриншотов прямо из буфера обмена</li>
+            <li>Drag &amp; Drop файлов в чат</li>
+            <li>Работа с любым адресом сервера</li>
+          </ul>
+        </div>
+        <div class="client__code">
+          <ol class="download">
+            <li>Откройте раздел <b>Releases</b> репозитория Точка.чат на GitHub</li>
+            <li>Скачайте последний <b>.exe</b> из релиза и установите его</li>
+            <li>При входе укажите адрес вашего сервера — и работайте</li>
+          </ol>
+          <a href="https://github.com/" class="btn btn--primary btn--lg js-release" target="_blank" rel="noopener">Скачать последний релиз</a>
+          <a href="https://github.com/" class="btn btn--ghost js-repo" target="_blank" rel="noopener">Открыть репозиторий (server)</a>
+          <p class="client__note">Клиент обновляется автоматически: новые версии доставляются с вашего сервера через electron-updater.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <span class="section__tag">FAQ</span>
+        <h2 class="section__title">Частые вопросы</h2>
+      </div>
+      <div class="faq">
+        <details class="faq__item reveal">
+          <summary>Обязателен ли Active Directory?</summary>
+          <p>Нет. LDAP/AD используется как основной источник аутентификации, но при недоступности сервера AD мессенджер автоматически переключается на локальную регистрацию в своей базе (bcrypt).</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Какие требования к серверу?</summary>
+          <p>Linux с установленными Node.js 18+ и PostgreSQL 14+. Для небольшой команды достаточно VPS от 2 ГБ RAM. Порт по умолчанию — 3001.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Как обновить приложение у пользователей?</summary>
+          <p>Один раз выполните <code>npm run pub patch|minor|major</code> на своей машине: скрипт соберёт .exe, загрузит его и манифест latest.yml на сервер. Клиенты обновятся автоматически через electron-updater.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Код клиента открыт?</summary>
+          <p>Нет. В публичном репозитории — серверная часть (<code>server/</code>) под лицензией MIT и готовый установщик <code>.exe</code> из релизов. Клиент распространяется как готовое приложение и поставляется без исходного кода.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Можно ли доработать под себя?</summary>
+          <p>Серверную часть — да: она открыта, написана на Node.js и доступна для изменения и пересборки. Логика и интерфейс клиента в публичном доступе не публикуются.</p>
+        </details>
+        <details class="faq__item reveal">
+          <summary>Есть ли мобильный клиент?</summary>
+          <p>Сейчас Точка.чат — нативное приложение для Windows. Клиент на Electron позволяет запускать интерфейс и в других настольных системах.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta__inner">
+      <h2 class="cta__title">Готовы развернуть свой мессенджер?</h2>
+      <p class="cta__sub">Скачайте релизный .exe, разверните сервер из репозитория — и уже сегодня команда будет общаться в вашем контуре.</p>
+      <div class="cta__actions">
+        <a href="https://github.com/" class="btn btn--primary btn--lg js-release" target="_blank" rel="noopener">Скачать клиент (.exe)</a>
+        <a href="#server" class="btn btn--ghost btn--lg">Развернуть сервер</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/icon.svg" alt="Логотип Точка.чат" width="28" height="28">
+        <span>Точка.чат</span>
+      </div>
+      <p class="footer__note">Корпоративный мессенджер · Electron + React + Node.js + PostgreSQL + Socket.IO</p>
+      <p class="footer__copy">© 2026 Точка.чат · MIT License</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
