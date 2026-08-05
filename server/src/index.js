@@ -3,6 +3,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 const config = require('./config');
 const db = require('./db');
 const { seedGeneralChannel } = require('./db/seed');
@@ -29,11 +30,16 @@ app.use('/api/messages', require('./routes/messages'));
 app.use('/api/files', require('./routes/files'));
 app.use('/api/updates', require('./routes/updates'));
 
-app.use(express.static(path.join(__dirname, '../../client/build')));
+const uploadsDir = path.join(__dirname, '../uploads');
+if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../client/build', 'index.html'));
-});
+const clientBuildDir = path.join(__dirname, '../../client/build');
+if (fs.existsSync(clientBuildDir)) {
+  app.use(express.static(clientBuildDir));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(clientBuildDir, 'index.html'));
+  });
+}
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
