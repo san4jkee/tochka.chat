@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var GITHUB_REPO = 'https://github.com/your-org/tochka-chat';
+  var GITHUB_REPO = 'https://github.com/san4jkee/tochka.chat';
   var GITHUB_RELEASES = GITHUB_REPO + '/releases/latest';
 
   document.querySelectorAll('.js-repo').forEach(function (a) { a.href = GITHUB_REPO; });
