@@ -44,15 +44,15 @@
     <div class="hero__glow hero__glow--2"></div>
     <div class="container hero__inner">
       <div class="hero__content">
-        <span class="badge">Self-hosted · Windows · Active Directory</span>
+        <span class="badge">Бесплатно · Self-hosted · Windows · Active Directory</span>
         <h1 class="hero__title">
           Мессенджер для команд,<br>
           который <span class="gradient-text">работает у вас</span>
         </h1>
         <p class="hero__subtitle">
-          Точка.чат — корпоративный мессенджер для Windows. Разворачивается на вашем
-          сервере за 15 минут, подключается к Active Directory и не отправляет данные
-          за пределы организации.
+          Точка.чат — абсолютно бесплатный корпоративный мессенджер для Windows.
+          Разворачивается на вашем сервере за 15 минут, подключается к Active Directory
+          и не отправляет данные за пределы организации.
         </p>
         <div class="hero__actions">
           <a href="https://github.com/san4jkee/tochka.chat/releases/latest" class="btn btn--primary btn--lg js-release" target="_blank" rel="noopener">Скачать клиент (.exe)</a>
@@ -63,6 +63,7 @@
           <div class="stat"><b>PostgreSQL</b><span>хранение данных</span></div>
           <div class="stat"><b>Socket.IO</b><span>реальное время</span></div>
           <div class="stat"><b>Electron</b><span>нативное приложение</span></div>
+          <div class="stat"><b>Бесплатно</b><span>для всей команды</span></div>
         </div>
       </div>
 
@@ -238,7 +239,7 @@
         <div class="client__text">
           <span class="section__tag">Клиент</span>
           <h2 class="section__title">Нативное приложение для Windows</h2>
-          <p class="section__sub">Десктопный клиент на Electron — стабильный, автообновляемый, полностью на русском языке.</p>
+          <p class="section__sub">Десктопный клиент на Electron — бесплатный, стабильный, автообновляемый, полностью на русском языке.</p>
           <ul class="checklist">
             <li>Автозапуск при входе в Windows</li>
             <li>Автообновление через встроенный механизм</li>
@@ -269,6 +270,10 @@
         <h2 class="section__title">Частые вопросы</h2>
       </div>
       <div class="faq">
+        <details class="faq__item reveal">
+          <summary>Сколько стоит Точка.чат?</summary>
+          <p>Нисколько. Мессенджер абсолютно бесплатный: без подписок, лицензионных платежей и ограничений по числу пользователей. Вы платите только за свой сервер.</p>
+        </details>
         <details class="faq__item reveal">
           <summary>Обязателен ли Active Directory?</summary>
           <p>Нет. LDAP/AD используется как основной источник аутентификации, но при недоступности сервера AD мессенджер автоматически переключается на локальную регистрацию в своей базе (bcrypt).</p>
@@ -301,7 +306,7 @@
   <section class="cta">
     <div class="container cta__inner">
       <h2 class="cta__title">Готовы развернуть свой мессенджер?</h2>
-      <p class="cta__sub">Скачайте релизный .exe, разверните сервер из репозитория — и уже сегодня команда будет общаться в вашем контуре.</p>
+      <p class="cta__sub">Абсолютно бесплатный клиент, сервер из открытого репозитория — разверните всё и уже сегодня команда будет общаться в вашем контуре.</p>
       <div class="cta__actions">
         <a href="https://github.com/san4jkee/tochka.chat/releases/latest" class="btn btn--primary btn--lg js-release" target="_blank" rel="noopener">Скачать клиент (.exe)</a>
         <a href="#server" class="btn btn--ghost btn--lg">Развернуть сервер</a>
@@ -315,7 +320,7 @@
         <img src="assets/icon.svg" alt="Логотип Точка.чат" width="28" height="28">
         <span>Точка.чат</span>
       </div>
-      <p class="footer__note">Корпоративный мессенджер · Electron + React + Node.js + PostgreSQL + Socket.IO</p>
+      <p class="footer__note">Бесплатный корпоративный мессенджер · Electron + React + Node.js + PostgreSQL + Socket.IO</p>
       <p class="footer__copy">© 2026 Точка.чат · MIT License</p>
     </div>
   </footer>

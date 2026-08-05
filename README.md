@@ -1,6 +1,6 @@
 # Точка.чат
 
-Корпоративный мессенджер для Windows. Клиент распространяется готовым `.exe` из [Releases](https://github.com/san4jkee/tochka.chat/releases), серверная часть — в этом репозитории.
+Абсолютно бесплатный корпоративный мессенджер для Windows: без подписок, лицензий и ограничений по числу пользователей. Клиент распространяется готовым `.exe` из [Releases](https://github.com/san4jkee/tochka.chat/releases), серверная часть — в этом репозитории.
 
 **Стек**: Node.js · Express · PostgreSQL (knex) · Socket.IO · LDAP (ldapjs) · JWT
 
