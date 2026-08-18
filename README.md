@@ -43,7 +43,7 @@ sudo postgresql-setup --initdb
 ### 2. Создание базы данных
 
 ```bash
-sudo -u postgres psql -c "CREATE EXTENSION IF NOT EXISTS \"pgcrypto\";"
+sudo -u postgres psql -c "CREATE EXTENSION IF NOT EXISTS "pgcrypto";"
 sudo -u postgres psql -c "CREATE DATABASE messenger;"
 sudo -u postgres psql -c "CREATE USER messenger_user WITH PASSWORD 'your_secure_password';"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE messenger TO messenger_user;"

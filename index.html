@@ -4,17 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Точка.чат — корпоративный мессенджер для Windows</title>
-  <meta name="description" content="Точка.чат — защищённый корпоративный мессенджер для Windows с аутентификацией через Active Directory. Данные остаются на вашем сервере.">
-  <meta name="keywords" content="корпоративный мессенджер, Active Directory, чат для компании, самохостинг, Windows, Точка чат">
+  <meta name="description" content="Точка.чат — абсолютно бесплатный корпоративный мессенджер для Windows. Self-hosted, вход через Active Directory, данные остаются на вашем сервере.">
   <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
   <link rel="canonical" href="https://tochkachat.ru/">
-  <meta property="og:title" content="Точка.чат — корпоративный мессенджер">
-  <meta property="og:description" content="Защищённый мессенджер для команд и компаний. Развёртывание на вашем сервере, вход по Active Directory.">
+  <meta property="og:title" content="Точка.чат — бесплатный корпоративный мессенджер для Windows">
+  <meta property="og:description" content="Абсолютно бесплатный корпоративный мессенджер для Windows. Self-hosted, вход через Active Directory, данные остаются на вашем сервере.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tochkachat.ru/">
+  <meta property="og:site_name" content="Точка.чат">
+  <meta property="og:image" content="https://tochkachat.ru/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Точка.чат — бесплатный корпоративный мессенджер для Windows">
+  <meta name="twitter:description" content="Абсолютно бесплатный корпоративный мессенджер для Windows. Self-hosted, вход через Active Directory, данные остаются на вашем сервере.">
+  <meta name="twitter:image" content="https://tochkachat.ru/assets/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Точка.чат",
+        "url": "https://tochkachat.ru/",
+        "logo": "https://tochkachat.ru/assets/icon.svg"
+      },
+      {
+        "@type": "WebSite",
+        "name": "Точка.чат",
+        "url": "https://tochkachat.ru/",
+        "inLanguage": "ru"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Точка.чат",
+        "operatingSystem": "Windows",
+        "applicationCategory": "CommunicationApplication",
+        "inLanguage": "ru",
+        "description": "Абсолютно бесплатный корпоративный мессенджер для Windows с аутентификацией через Active Directory. Данные остаются на вашем сервере.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "RUB"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Сколько стоит Точка.чат?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Нисколько. Мессенджер абсолютно бесплатный: без подписок, лицензионных платежей и ограничений по числу пользователей. Вы платите только за свой сервер."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Обязателен ли Active Directory?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Нет. LDAP/AD используется как основной источник аутентификации, но при недоступности сервера AD мессенджер автоматически переключается на локальную регистрацию в своей базе (bcrypt)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какие требования к серверу?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Linux с установленными Node.js 18+ и PostgreSQL 14+. Для небольшой команды достаточно VPS от 2 ГБ RAM. Порт по умолчанию — 3001."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как обновить приложение у пользователей?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Один раз выполните npm run pub patch|minor|major на своей машине: скрипт соберёт .exe, загрузит его и манифест latest.yml на сервер. Клиенты обновятся автоматически через electron-updater."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Код клиента открыт?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Нет. В публичном репозитории — серверная часть (server/) под лицензией MIT и готовый установщик .exe из релизов. Клиент распространяется как готовое приложение и поставляется без исходного кода."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли доработать под себя?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Серверную часть — да: она открыта, написана на Node.js и доступна для изменения и пересборки. Логика и интерфейс клиента в публичном доступе не публикуются."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Есть ли мобильный клиент?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Сейчас Точка.чат — нативное приложение для Windows. Клиент на Electron позволяет запускать интерфейс и в других настольных системах."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -218,16 +317,81 @@
 
       <div class="setup">
         <div class="setup__nav" id="setupNav">
-          <button class="setup__tab is-active" data-step="0">1 · База данных</button>
-          <button class="setup__tab" data-step="1">2 · Окружение</button>
-          <button class="setup__tab" data-step="2">3 · Миграции</button>
-          <button class="setup__tab" data-step="3">4 · Запуск</button>
-          <button class="setup__tab" data-step="4">5 · pm2</button>
-          <button class="setup__tab" data-step="5">6 · Клиент</button>
+          <button class="setup__tab is-active" data-step="0" type="button">1 · Установка PostgreSQL и создание базы данных</button>
+          <button class="setup__tab" data-step="1" type="button">2 · Установка зависимостей и файл окружения</button>
+          <button class="setup__tab" data-step="2" type="button">3 · Запуск миграций</button>
+          <button class="setup__tab" data-step="3" type="button">4 · Запуск сервера</button>
+          <button class="setup__tab" data-step="4" type="button">5 · Управление сервером через pm2</button>
+          <button class="setup__tab" data-step="5" type="button">6 · Установка клиента (релиз)</button>
         </div>
 
-        <div class="setup__panel" id="setupPanel">
-          <!-- panels injected by JS -->
+        <div class="setup__panel">
+          <div class="setup__step is-active" data-step="0">
+            <h4>Установка PostgreSQL и создание базы данных</h4>
+            <p>Настройте PostgreSQL и создайте базу, пользователя и расширение pgcrypto.</p>
+            <div class="code">
+              <div class="code__head"><span>шаг 1</span><button class="copy" type="button">Копировать</button></div>
+              <pre><code>sudo -u postgres psql -c "CREATE EXTENSION IF NOT EXISTS "pgcrypto";"
+sudo -u postgres psql -c "CREATE DATABASE messenger;"
+sudo -u postgres psql -c "CREATE USER messenger_user WITH PASSWORD 'your_secure_password';"
+sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE messenger TO messenger_user;"
+sudo -u postgres psql -d messenger -c "GRANT ALL ON SCHEMA public TO messenger_user;"</code></pre>
+            </div>
+            <p>Ubuntu / Debian: <code>sudo apt install postgresql postgresql-contrib</code>. На CentOS/RHEL дополнительно выполните: <code>sudo dnf install postgresql-server postgresql-contrib &amp;&amp; sudo postgresql-setup --initdb</code>.</p>
+          </div>
+          <div class="setup__step" data-step="1">
+            <h4>Установка зависимостей и файл окружения</h4>
+            <p>Перейдите в папку сервера, установите зависимости и создайте файл .env из шаблона.</p>
+            <div class="code">
+              <div class="code__head"><span>шаг 2</span><button class="copy" type="button">Копировать</button></div>
+              <pre><code>cd server
+npm install
+cp .env.example .env</code></pre>
+            </div>
+            <p>Отредактируйте .env: укажите доступы к PostgreSQL, JWT_SECRET и опционально параметры LDAP/Active Directory.</p>
+          </div>
+          <div class="setup__step" data-step="2">
+            <h4>Запуск миграций</h4>
+            <p>Миграции создадут все необходимые таблицы: пользователей, каналы, сообщения, реакции, опросы и галочки прочтения.</p>
+            <div class="code">
+              <div class="code__head"><span>шаг 3</span><button class="copy" type="button">Копировать</button></div>
+              <pre><code>npm run migrate</code></pre>
+            </div>
+            <p>Миграции работают через knex. Перед первым запуском убедитесь, что пользователь PostgreSQL имеет права на схему public.</p>
+          </div>
+          <div class="setup__step" data-step="3">
+            <h4>Запуск сервера</h4>
+            <p>Для разработки используйте nodemon с горячей перезагрузкой, для продакшена — обычный старт.</p>
+            <div class="code">
+              <div class="code__head"><span>шаг 4</span><button class="copy" type="button">Копировать</button></div>
+              <pre><code>npm run dev      # разработка (hot-reload)
+npm start         # продакшн</code></pre>
+            </div>
+            <p>Сервер будет доступен на http://localhost:3001. Откройте этот адрес в браузере и укажите его в клиенте.</p>
+          </div>
+          <div class="setup__step" data-step="4">
+            <h4>Управление сервером через pm2</h4>
+            <p>pm2 держит процесс в живых, перезапускает при сбоях и показывает логи.</p>
+            <div class="code">
+              <div class="code__head"><span>шаг 5</span><button class="copy" type="button">Копировать</button></div>
+              <pre><code>pm2 start "npm start" --name messenger
+pm2 restart messenger
+pm2 logs messenger</code></pre>
+            </div>
+            <p>Полезно добавить pm2-startup и pm2-save, чтобы сервер поднимался автоматически после перезагрузки.</p>
+          </div>
+          <div class="setup__step" data-step="5">
+            <h4>Установка клиента (релиз)</h4>
+            <p>Исходный код клиента не публикуется — приложение распространяется готовым установщиком из GitHub Releases.</p>
+            <div class="code">
+              <div class="code__head"><span>шаг 6</span><button class="copy" type="button">Копировать</button></div>
+              <pre><code># 1. Откройте раздел Releases репозитория на GitHub
+# 2. Скачайте последний .exe и установите его
+# 3. При входе укажите адрес сервера:
+#    http://server-ip:3001</code></pre>
+            </div>
+            <p>Адрес сервера хранится локально на каждом компьютере и меняется на странице входа (иконка настроек). Обновления доставляются автоматически с вашего сервера.</p>
+          </div>
         </div>
       </div>
     </div>

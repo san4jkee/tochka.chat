@@ -240,6 +240,8 @@ code { font-family: var(--mono); font-size: 0.9em; }
 .setup__panel h4 { font-size: 1.05rem; margin-bottom: 14px; font-weight: 700; }
 .setup__panel p { color: var(--text-dim); margin-bottom: 16px; font-size: 0.95rem; }
 .setup__panel .code { margin-top: 14px; }
+.setup__step { display: none; }
+.setup__step.is-active { display: block; }
 
 /* ---------- CODE ---------- */
 .code {
